@@ -5,6 +5,7 @@ enum STATUS {
   OK = 'Ok',
   REGISTRATION_ERROR = 'An error occurred while trying to register the user',
   NOT_AUTHORIZED = 'User not authorized',
+  PENDING_TOKEN = 'The authentication token is missing',
 }
 
 export default STATUS;
