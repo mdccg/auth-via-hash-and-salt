@@ -42,7 +42,7 @@ export class AuthController {
     token = token.substring(7, token.length); // Removing "Bearer " prefix
 
     try {
-      verify(token, process.env.SECRET);
+      verify(token, process.env.NOT_SO_SECRET);
       next();
       return;
 

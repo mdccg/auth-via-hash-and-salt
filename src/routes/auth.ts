@@ -29,11 +29,17 @@ authRouter.post('/login', async (req, res) => {
   const user = await authController.findUserByEmail(email);
 
   if (!user) {
-    return res.status(400).json({ message: 'The provided email is not registered.' });
+    return res.status(400).json({
+      authorized: false,
+      message: 'The provided email is not registered.'
+    });
   }
 
   if (!user.isPasswordCorrect(password)) {
-    return res.status(401).json({ message: 'The password is incorrect.' });
+    return res.status(401).json({
+      authorized: false,
+      message: 'The password is incorrect.'
+  });
   }
 
   const payload = {
@@ -41,7 +47,7 @@ authRouter.post('/login', async (req, res) => {
     authTime: new Date().getTime() * 1_000
   };
 
-  const token = sign(payload, process.env.SECRET, { expiresIn: '20s' });
+  const token = sign(payload, process.env.NOT_SO_SECRET, { expiresIn: '20s' });
 
   res.status(200).json({
     authorized: true,
