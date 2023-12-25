@@ -28,8 +28,8 @@ Esses métodos são essenciais para a segurança robusta do sistema de autentica
 
 Este foi o quinto repositório de código apresentado no [Curso Superior de TSI do IFMS](https://www.ifms.edu.br/campi/campus-aquidauana/cursos/graduacao/sistemas-para-internet/sistemas-para-internet) como requisito para obtenção da nota parcial das atividades da unidade curricular Web Services.
 
-| [&larr; Repositório anterior](https://github.com/mdccg/dynamic-store-api) | Próximo repositório &rarr; |
-|-|-|
+| [&larr; Repositório anterior](https://github.com/mdccg/dynamic-store-api) |
+|-|
 
 ## Pilha de tecnologia
 
